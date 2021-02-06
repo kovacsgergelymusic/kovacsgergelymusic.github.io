@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+body {
+  background-color: linen;
+}
+
+button {
+  color: maroon;
+  margin-left: 40px;
+  font-size: 25px;
+}
+    
+h1 {
+  font-size: 25px;
+    }
+</style>
 <script>
 function clickCounter() {
   if (typeof(Storage) !== "undefined") {
@@ -34,7 +49,7 @@ function showCounter() {
 
 <p><button onclick="clickCounter()" type="button">Kupon használat</button></p>
 <p><button onclick="showCounter()" type="button">Kupon használatok száma</button></p>
-<div id="result"></div>
+<h1 id="result"></h1>
 
 </body>
 </html>
