@@ -15,12 +15,26 @@ function clickCounter() {
   }
 }
 </script>
+  <script>
+function showCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount);
+    } else {
+      localStorage.clickcount = 0;
+    }
+    document.getElementById("result").innerHTML = "A kupont " + localStorage.clickcount + " alkalomszor használtad már fel."
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
 </head>
 <body>
 
 <p><button onclick="clickCounter()" type="button">Kupon használat</button></p>
+<p><button onclick="showCounter()" type="button">Kupon használatok száma</button></p>
 <div id="result"></div>
-<p>Kupon használat esetén klikk!</p>
 
 </body>
 </html>
