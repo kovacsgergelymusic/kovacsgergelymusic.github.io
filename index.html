@@ -9,7 +9,7 @@ function clickCounter() {
     } else {
       localStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    document.getElementById("result").innerHTML = "A kupont" + localStorage.clickcount + " alkalomszor használtad fel. Még van" + 6 - localStorage.clickcount +" alkalmad.";
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
@@ -18,10 +18,9 @@ function clickCounter() {
 </head>
 <body>
 
-<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<p><button onclick="clickCounter()" type="button">Kupon használat</button></p>
 <div id="result"></div>
-<p>Click the button to see the counter increase.</p>
-<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+<p>Kupon használat esetén klikk!</p>
 
 </body>
 </html>
