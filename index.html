@@ -16,6 +16,7 @@ h1 {
   font-size: 25px;
     }
 </style>
+   <body onload="loadPage()"> 
 <script>
 function clickCounter() {
   if (typeof(Storage) !== "undefined") {
@@ -31,7 +32,7 @@ function clickCounter() {
 }
 </script>
   <script>
-function showCounter() {
+function loadPage() {
   if (typeof(Storage) !== "undefined") {
     if (localStorage.clickcount) {
       localStorage.clickcount = Number(localStorage.clickcount);
@@ -47,8 +48,8 @@ function showCounter() {
 </head>
 <body>
 
+<h1>Grumpokupon számláló</h1>
 <p><button onclick="clickCounter()" type="button">Kupon használat</button></p>
-<p><button onclick="showCounter()" type="button">Kupon használatok száma</button></p>
 <h1 id="result"></h1>
 
 </body>
