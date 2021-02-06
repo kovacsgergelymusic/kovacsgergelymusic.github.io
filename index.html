@@ -9,7 +9,7 @@ function clickCounter() {
     } else {
       localStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "A kupont" + localStorage.clickcount + " alkalomszor használtad fel. Még van" + 6 - localStorage.clickcount +" alkalmad.";
+    document.getElementById("result").innerHTML = "A kupont" + localStorage.clickcount + " alkalomszor használtad már fel."
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
